@@ -1,3 +1,36 @@
+
+# 💰 Personal Finance Tracker
+
+A web-based personal finance tracker that allows users to manage their income and expenses, categorize spending, and visualize data through graphs. Built using **HTML, CSS, JavaScript, MySQL**, and optionally **Node.js** for backend functionality.
+
+---
+
+## 🚀 Features
+
+- 🧾 Add, edit, and delete income and expense entries
+- 📊 View summary of total expenses and income
+- 🔍 Filter by category and date
+- 📅 Date picker for custom entries
+- 📈 Interactive charts using Chart.js
+- 👤 Optional user login (if backend is added)
+- 📤 Export data to CSV (optional)
+
+---
+
+## 🛠️ Tech Stack
+
+| Layer       | Technology              |
+|-------------|-------------------------|
+| Frontend    | HTML, CSS, JavaScript   |
+| Backend     | Node.js (Optional)      |
+| Database    | MySQL                   |
+| Charts      | Chart.js                |
+| UI Styling  | Bootstrap / Tailwind CSS|
+
+---
+
+## 🗂️ Folder Structure
+
 finance-tracker/
 │
 ├── index.html                # Landing page / User login page
