@@ -1,0 +1,35 @@
+<!-- dashboard.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Personal Finance Tracker</title>
+    <link rel="stylesheet" href="css/style.css"> <!-- Link to the CSS file -->
+</head>
+<body>
+    <header>
+        <h1>Your Financial Dashboard</h1>
+    </header>
+
+    <!-- Form to add new expense/income -->
+    <section class="add-transaction">
+        <input type="text" id="amount" placeholder="Amount">
+        <input type="text" id="category" placeholder="Category (e.g., Food, Rent)">
+        <input type="date" id="date">
+        <button onclick="addTransaction()">Add Transaction</button> <!-- JS function for adding transactions -->
+    </section>
+
+    <!-- Displaying the transaction summary (list of expenses/incomes) -->
+    <section id="transaction-list">
+        <!-- Will be populated dynamically via JavaScript -->
+    </section>
+
+    <!-- Optional: Charts or summaries (e.g., Pie Chart showing expense breakdown) -->
+    <section id="charts">
+        <!-- Chart.js or other visualizations can be displayed here -->
+    </section>
+
+    <script src="js/main.js"></script> <!-- Link to the main JavaScript -->
+</body>
+</html>
