@@ -2,7 +2,6 @@
 # 💰 Personal Finance Tracker
 
 A web-based personal finance tracker that allows users to manage their income and expenses, categorize spending, and visualize data through graphs. Built using **HTML, CSS, JavaScript, MySQL**, and optionally **Node.js** for backend functionality.
-
 --
 
 ## 🚀 Features
