@@ -2,7 +2,6 @@
 
 ## 🏥 Project Overview  
 MediLink is a medical appointment booking system designed to simplify the process of scheduling medical consultations. The platform provides intuitive interfaces for patients, doctors, and administrators to manage healthcare appointments efficiently.  
-
 ## 🌟 Features  
 
 ### Patient Features  
