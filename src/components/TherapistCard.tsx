@@ -37,12 +37,12 @@ export function TherapistCard({
           {therapist.isAcceptingClients ? (
             <span className="flex items-center space-x-1 bg-green-500 text-white text-xs font-semibold px-3 py-1.5 rounded-full">
               <CheckCircleIcon className="w-3 h-3" />
-              <span>Accepting Clients</span>
+              <span>Open Now</span>
             </span>
           ) : (
             <span className="flex items-center space-x-1 bg-slate-500 text-white text-xs font-semibold px-3 py-1.5 rounded-full">
               <ClockIcon className="w-3 h-3" />
-              <span>Waitlist Only</span>
+              <span>Closed</span>
             </span>
           )}
         </div>
@@ -54,12 +54,13 @@ export function TherapistCard({
           </h3>
           <p className="text-sm text-slate-200 flex items-center space-x-2">
             <AwardIcon className="w-4 h-4" />
-            <span>Licensed Therapist • {therapist.licenseNumber}</span>
+            <span>Rental Location • {therapist.licenseNumber}</span>
           </p>
         </div>
       </div>
 
       {/* Experience & Rate */}
+      {therapist.yearsExperience > 0 && (
       <div className="flex items-center justify-between mb-4 pb-4 border-b border-slate-200">
         <div>
           <p className="text-sm text-slate-600">Experience</p>
@@ -69,22 +70,23 @@ export function TherapistCard({
         </div>
         <div className="text-right">
           <p className="text-sm text-slate-600">Session Rate</p>
-          <p className="text-lg font-semibold text-teal-600">
+          <p className="text-lg font-semibold text-blue-600">
             ${therapist.sessionRate}/hr
           </p>
         </div>
       </div>
+      )}
 
       {/* Specializations */}
       <div className="mb-4">
         <p className="text-sm font-medium text-slate-700 mb-2">
-          Specializations
+          Services & Features
         </p>
         <div className="flex flex-wrap gap-2">
           {therapist.specializations.slice(0, 3).map((spec, idx) => (
             <span
               key={idx}
-              className="text-xs bg-teal-50 text-teal-700 px-3 py-1 rounded-full"
+              className="text-xs bg-blue-50 text-blue-700 px-3 py-1 rounded-full"
             >
               {spec}
             </span>
@@ -110,7 +112,7 @@ export function TherapistCard({
         onClick={() => onBookSession(therapist)}
         disabled={!therapist.isAcceptingClients}
       >
-        {therapist.isAcceptingClients ? 'Book Session' : 'Join Waitlist'}
+        {therapist.isAcceptingClients ? 'View Location' : 'Currently Closed'}
       </Button>
     </Card>
   )

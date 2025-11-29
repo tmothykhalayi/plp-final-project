@@ -26,108 +26,108 @@ const staggerContainer = {
     },
   },
 }
-// Mock therapist data
+// Mock location data
 const therapists: TherapistProfile[] = [
   {
     id: '1',
-    name: 'Dr. Sarah Chen',
+    name: 'Airport Terminal 1',
     image:
-      'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&q=80',
-    licenseNumber: 'LPC-12345',
+      'https://images.unsplash.com/photo-1556388158-158ea5ccacbd?w=600&q=80',
+    licenseNumber: 'Open 24/7',
     specializations: [
-      'Burnout Prevention',
-      'Work-Life Balance',
-      'Anxiety Management',
-      'Career Transitions',
+      'Airport',
+      '24/7 Service',
+      'Free Shuttle',
+      'Quick Pickup',
     ],
-    yearsExperience: 8,
-    bio: 'Specializing in tech industry burnout and work-life balance. I understand the unique pressures of software development and help developers build sustainable careers while maintaining mental wellness.',
-    sessionRate: 150,
+    yearsExperience: 0,
+    bio: 'Located inside Terminal 1 arrivals hall. Free shuttle service to parking lot. Fast check-in with priority counter. Perfect for business travelers and tourists.',
+    sessionRate: 0,
     isAcceptingClients: true,
   },
   {
     id: '2',
-    name: 'Dr. Michael Torres',
+    name: 'Airport Terminal 3',
     image:
-      'https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=600&q=80',
-    licenseNumber: 'LMFT-67890',
+      'https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=600&q=80',
+    licenseNumber: 'Open 24/7',
     specializations: [
-      'Imposter Syndrome',
-      'Performance Anxiety',
-      'Team Dynamics',
-      'Leadership Stress',
+      'Airport',
+      '24/7 Service',
+      'Free Shuttle',
+      'International',
     ],
-    yearsExperience: 12,
-    bio: 'Former software engineer turned therapist. I combine technical understanding with therapeutic expertise to help developers overcome imposter syndrome and thrive in their careers.',
-    sessionRate: 175,
+    yearsExperience: 0,
+    bio: 'International terminal location with multilingual staff. Open around the clock for late arrivals and early departures. Complimentary shuttle to vehicle lot.',
+    sessionRate: 0,
     isAcceptingClients: true,
   },
   {
     id: '3',
-    name: 'Dr. Emily Rodriguez',
+    name: 'Downtown Main Street',
     image:
-      'https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=600&q=80',
-    licenseNumber: 'PsyD-24680',
+      'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&q=80',
+    licenseNumber: '8AM - 8PM',
     specializations: [
-      'Depression',
-      'Anxiety',
-      'Remote Work Challenges',
-      'Social Isolation',
+      'Downtown',
+      'Business District',
+      'Validated Parking',
+      'Express Service',
     ],
-    yearsExperience: 10,
-    bio: 'Focused on helping remote developers manage isolation and maintain mental health. I provide evidence-based strategies for thriving in distributed work environments.',
-    sessionRate: 160,
+    yearsExperience: 0,
+    bio: 'Prime location in the heart of downtown. Easy access from major hotels and business centers. Validated parking for quick pickup. Extended hours for your convenience.',
+    sessionRate: 0,
     isAcceptingClients: true,
   },
   {
     id: '4',
-    name: 'Dr. James Kim',
+    name: 'City Center Plaza',
     image:
-      'https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=600&q=80',
-    licenseNumber: 'PhD-13579',
+      'https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=600&q=80',
+    licenseNumber: '7AM - 10PM',
     specializations: [
-      'Stress Management',
-      'Mindfulness',
-      'On-Call Anxiety',
-      'Sleep Issues',
+      'Downtown',
+      'Shopping District',
+      'Weekend Service',
+      'Corporate Rentals',
     ],
-    yearsExperience: 15,
-    bio: 'Expert in stress management and mindfulness techniques tailored for high-pressure tech roles. I help developers manage on-call stress and deployment anxiety effectively.',
-    sessionRate: 180,
-    isAcceptingClients: false,
+    yearsExperience: 0,
+    bio: 'Central location near shopping and entertainment. Specialized corporate rental programs. Weekend and holiday hours available. Premium fleet selection.',
+    sessionRate: 0,
+    isAcceptingClients: true,
   },
   {
     id: '5',
-    name: 'Dr. Aisha Patel',
+    name: 'Suburban North Branch',
     image:
-      'https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=600&q=80',
-    licenseNumber: 'LCSW-98765',
+      'https://images.unsplash.com/photo-1590362891991-f776e747a588?w=600&q=80',
+    licenseNumber: '9AM - 6PM',
     specializations: [
-      'Career Transitions',
-      'Confidence Building',
-      'Communication Skills',
-      'Boundary Setting',
+      'Suburban',
+      'Family Friendly',
+      'Free Parking',
+      'Long-term Rentals',
     ],
-    yearsExperience: 7,
-    bio: 'Helping developers navigate career changes and build confidence. I specialize in communication skills and setting healthy boundaries in fast-paced tech environments.',
-    sessionRate: 140,
+    yearsExperience: 0,
+    bio: 'Convenient suburban location with free parking. Specializing in family vehicles and long-term rentals. Friendly staff and personalized service.',
+    sessionRate: 0,
     isAcceptingClients: true,
   },
   {
     id: '6',
-    name: 'Dr. David Nguyen',
+    name: 'Hotel District Office',
     image:
-      'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80',
-    licenseNumber: 'LPC-54321',
+      'https://images.unsplash.com/photo-1566073771259-6a8506099945?w=600&q=80',
+    licenseNumber: '6AM - 11PM',
     specializations: [
-      'ADHD',
-      'Focus & Productivity',
-      'Time Management',
-      'Learning Overwhelm',
+      'Hotel Pickup',
+      'Extended Hours',
+      'Delivery Service',
+      'Luxury Fleet',
     ],
-    yearsExperience: 9,
-    bio: 'Specializing in ADHD and focus challenges in tech. I help developers optimize their productivity while managing the constant learning demands of the industry.',
-    sessionRate: 155,
+    yearsExperience: 0,
+    bio: 'Located in the hotel district with delivery service to your hotel. Extended hours to accommodate early checkouts and late arrivals. Premium and luxury vehicles available.',
+    sessionRate: 0,
     isAcceptingClients: true,
   },
 ]
@@ -157,11 +157,11 @@ export function Therapists() {
       <section className="relative min-h-[800px] flex items-center justify-center px-4 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
-            src="https://images.unsplash.com/photo-1637245048732-adf1a547835e?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-            alt="Professional therapist"
+            src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1600&q=80"
+            alt="City skyline"
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-linear-to-br from-slate-900/90 via-slate-900/80 to-teal-900/70"></div>
+          <div className="absolute inset-0 bg-linear-to-br from-slate-900/90 via-slate-900/80 to-blue-900/70"></div>
         </div>
 
         <motion.div
@@ -179,11 +179,11 @@ export function Therapists() {
           }}
         >
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Find Your Therapist
+            Our Rental Locations
           </h1>
           <p className="text-xl text-slate-200 leading-relaxed max-w-2xl mx-auto">
-            Connect with licensed therapists who understand the unique
-            challenges of software development and tech culture.
+            Find a convenient location near you. We have offices at major airports,
+            downtown areas, and popular destinations.
           </p>
         </motion.div>
 
@@ -196,21 +196,21 @@ export function Therapists() {
           <div className="flex items-center space-x-3 mb-4">
             <FilterIcon className="w-5 h-5 text-slate-600" />
             <h3 className="font-semibold text-slate-900">
-              Filter by Specialization
+              Filter by Location Type
             </h3>
           </div>
           <div className="flex flex-wrap gap-2">
             <button
               onClick={() => setSelectedSpecialization(null)}
-              className={`px-4 py-2 rounded-lg text-sm font-medium transition-all ${selectedSpecialization === null ? 'bg-teal-600 text-white' : 'bg-slate-100 text-slate-700 hover:bg-slate-200'}`}
+              className={`px-4 py-2 rounded-lg text-sm font-medium transition-all ${selectedSpecialization === null ? 'bg-blue-600 text-white' : 'bg-slate-100 text-slate-700 hover:bg-slate-200'}`}
             >
-              All Therapists
+              All Locations
             </button>
             {allSpecializations.map((spec) => (
               <button
                 key={spec}
                 onClick={() => setSelectedSpecialization(spec)}
-                className={`px-4 py-2 rounded-lg text-sm font-medium transition-all ${selectedSpecialization === spec ? 'bg-teal-600 text-white' : 'bg-slate-100 text-slate-700 hover:bg-slate-200'}`}
+                className={`px-4 py-2 rounded-lg text-sm font-medium transition-all ${selectedSpecialization === spec ? 'bg-blue-600 text-white' : 'bg-slate-100 text-slate-700 hover:bg-slate-200'}`}
               >
                 {spec}
               </button>
@@ -249,13 +249,13 @@ export function Therapists() {
               className="text-center py-20"
             >
               <p className="text-xl text-slate-600 mb-4">
-                No therapists found with this specialization.
+                No locations found with this filter.
               </p>
               <button
                 onClick={() => setSelectedSpecialization(null)}
-                className="text-teal-600 hover:text-teal-700 font-medium"
+                className="text-blue-600 hover:text-blue-700 font-medium"
               >
-                View all therapists
+                View all locations
               </button>
             </motion.div>
           )}
@@ -266,43 +266,40 @@ export function Therapists() {
       <section className="py-20 px-4 bg-white">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-bold text-slate-900 mb-6">
-            How It Works
+            How to Rent
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
             <div>
-              <div className="w-12 h-12 bg-teal-100 rounded-xl flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl font-bold text-teal-600">1</span>
+              <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl font-bold text-blue-600">1</span>
               </div>
               <h3 className="font-semibold text-slate-900 mb-2">
-                Browse Therapists
+                Choose Your Location
               </h3>
               <p className="text-sm text-slate-600">
-                Review profiles, specializations, and availability to find the
-                right match.
+                Select a pickup location convenient to you - airport, downtown, or delivery.
               </p>
             </div>
             <div>
-              <div className="w-12 h-12 bg-teal-100 rounded-xl flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl font-bold text-teal-600">2</span>
+              <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl font-bold text-blue-600">2</span>
               </div>
               <h3 className="font-semibold text-slate-900 mb-2">
-                Book a Session
+                Select Your Vehicle
               </h3>
               <p className="text-sm text-slate-600">
-                Choose a convenient time slot and confirm your appointment
-                online.
+                Browse available vehicles and choose the perfect car for your needs.
               </p>
             </div>
             <div>
-              <div className="w-12 h-12 bg-teal-100 rounded-xl flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl font-bold text-teal-600">3</span>
+              <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl font-bold text-blue-600">3</span>
               </div>
               <h3 className="font-semibold text-slate-900 mb-2">
-                Start Your Journey
+                Pick Up & Drive
               </h3>
               <p className="text-sm text-slate-600">
-                Join your secure video session and begin working toward better
-                mental health.
+                Complete your booking online and pick up your vehicle at your chosen time.
               </p>
             </div>
           </div>

@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import type { SessionType } from "../../Dashboards/dev/Session";
 import {
   Sparkles,
   Brain,
@@ -15,6 +14,9 @@ import {
   ChevronRight,
   Bell,
 } from "lucide-react";
+
+// Define SessionType locally since Dashboards doesn't exist
+type SessionType = "dump" | "mindmap" | "chat";
 
 interface SidebarProps {
   isOpen: boolean;
