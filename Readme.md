@@ -1,227 +1,73 @@
-# MediLink - Medical Doctor Booking Appointment System  
+# React + TypeScript + Vite
 
-## 🏥 Project Overview  
-MediLink is a medical appointment booking system designed to simplify the process of scheduling medical consultations. The platform provides intuitive interfaces for patients, doctors, and administrators to manage healthcare appointments efficiently.  
-## 🌟 Features  
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-### Patient Features  
-- User registration and profile management  
-- Doctor search and discovery  
-- Easy appointment booking  
-- View upcoming appointments  
-- Cancel or reschedule appointments  
+Currently, two official plugins are available:
 
-### Doctor Features  
-- Professional profile creation  
-- Availability management  
-- Appointment scheduling  
-- View and manage appointments  
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-### Admin Features  
-- User and doctor management  
-- Appointment oversight  
-- System configuration  
+## React Compiler
 
-## 📸 Project Screenshots
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-### MediLink Patient Portal
-![Patient Login Page](https://res.cloudinary.com/dljyip1ey/image/upload/v1743265067/Screenshot_at_2025-03-29_19-05-05_wiq5jg.png)
-*Patient login interface with secure authentication*
+## Expanding the ESLint configuration
 
-![Doctor Search](https://res.cloudinary.com/dljyip1ey/image/upload/v1743265070/Screenshot_at_2025-03-29_19-06-31_qsg7vs.png)
-*Doctor search and filtering functionality*
+If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
 
-![Appointment Booking](https://res.cloudinary.com/dljyip1ey/image/upload/v1743265077/Screenshot_at_2025-03-29_19-08-18_lttowm.png)
-*Intuitive appointment scheduling interface*
+```js
+export default defineConfig([
+  globalIgnores(['dist']),
+  {
+    files: ['**/*.{ts,tsx}'],
+    extends: [
+      // Other configs...
 
-![Patient Dashboard](https://res.cloudinary.com/dljyip1ey/image/upload/v1743265085/Screenshot_at_2025-03-29_17-05-58_qzltz5.png)
-*Patient dashboard showing upcoming appointments*
+      // Remove tseslint.configs.recommended and replace with this
+      tseslint.configs.recommendedTypeChecked,
+      // Alternatively, use this for stricter rules
+      tseslint.configs.strictTypeChecked,
+      // Optionally, add this for stylistic rules
+      tseslint.configs.stylisticTypeChecked,
 
-### Admin & Doctor Dashboard
-![Admin Login](https://res.cloudinary.com/dljyip1ey/image/upload/v1743265914/Screenshot_at_2025-03-29_19-31-00_xgllbp.png)
-*Secure admin authentication portal*
-
-![Doctor Management](https://res.cloudinary.com/dljyip1ey/image/upload/v1743265096/Screenshot_at_2025-03-29_17-04-28_y3xdck.png)
-*Admin interface for managing doctor profiles*
-
-![Appointment Overview](https://res.cloudinary.com/dljyip1ey/image/upload/v1743265086/Screenshot_at_2025-03-29_17-05-45_hwjr96.png)
-*Comprehensive appointment management system*
-
-![Doctor Schedule](https://res.cloudinary.com/dljyip1ey/image/upload/v1743265066/Screenshot_at_2025-03-29_19-14-10_tvluac.png)
-*Doctor's interface for managing availability*
-
-## 🛠 Tech Stack  
-
-### Frontend  
-- React (Vite)  
-- Tailwind CSS  
-- React Router  
-- Axios  
-- State Management  
-
-### Backend  
-- Node.js  
-- Express.js  
-- MongoDB  
-- Mongoose  
-- JWT Authentication  
-- Cloudinary (Image Storage)  
-
-### Deployment  
-- **Frontend (Patients)**: [MediLink Live](https://power-learn-final-project-8.vercel.app/)  
-- **Admin & Doctor Dashboard**: [Admin & Doctor Dashboard Live](https://power-learn-final-project-6.vercel.app/)  
-- **Backend**: Render  
-- **Database**: MongoDB Atlas  
-
-## 📦 Project Structure  
-
+      // Other configs...
+    ],
+    languageOptions: {
+      parserOptions: {
+        project: ['./tsconfig.node.json', './tsconfig.app.json'],
+        tsconfigRootDir: import.meta.dirname,
+      },
+      // other options...
+    },
+  },
+])
 ```
-MediLink/
-│
-├── MediLink/           # Frontend Application
-│   ├── src/
-│   │   ├── components/
-│   │   ├── pages/
-│   │   ├── context/
-│   │   └── utils/
-│
-├── admin/              # Admin Dashboard
-│   ├── src/
-│   │   ├── components/
-│   │   ├── pages/
-│   │   └── utils/
-│
-└── backend/            # Backend Services
-    ├── config/
-    ├── controllers/
-    ├── models/
-    ├── routes/
-    └── middlewares/
-```  
 
-## 🚀 Getting Started  
+You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
 
-### Prerequisites  
-- Node.js (v16+)  
-- npm or yarn  
-- MongoDB Atlas account  
-- Cloudinary account  
+```js
+// eslint.config.js
+import reactX from 'eslint-plugin-react-x'
+import reactDom from 'eslint-plugin-react-dom'
 
-### Installation  
-
-1. Clone the repository  
-```bash
-git clone https://github.com/Derrick-Ryan-Giggs/Power-Learn-Final-Project
-cd MediLink
-```  
-
-2. Install Dependencies  
-```bash
-# Frontend
-cd MediLink
-npm install
-
-# Admin
-cd ../admin
-npm install
-
-# Backend
-cd ../backend
-npm install
-```  
-
-3. Environment Variables  
-
-#### Frontend `.env`  
+export default defineConfig([
+  globalIgnores(['dist']),
+  {
+    files: ['**/*.{ts,tsx}'],
+    extends: [
+      // Other configs...
+      // Enable lint rules for React
+      reactX.configs['recommended-typescript'],
+      // Enable lint rules for React DOM
+      reactDom.configs.recommended,
+    ],
+    languageOptions: {
+      parserOptions: {
+        project: ['./tsconfig.node.json', './tsconfig.app.json'],
+        tsconfigRootDir: import.meta.dirname,
+      },
+      // other options...
+    },
+  },
+])
 ```
-VITE_API_BASE_URL=http://localhost:4000/api
-```  
-
-#### Backend `.env`  
-```
-PORT=4000
-MONGODB_URI=your_mongodb_connection_string
-JWT_SECRET=your_jwt_secret
-CLOUDINARY_CLOUD_NAME=your_cloudinary_cloud_name
-CLOUDINARY_API_KEY=your_cloudinary_api_key
-CLOUDINARY_API_SECRET=your_cloudinary_api_secret
-```  
-
-### Running Locally  
-
-1. Start Backend  
-```bash
-cd backend
-npm run dev
-```  
-
-2. Start Frontend  
-```bash
-cd MediLink
-npm run dev
-```  
-
-3. Start Admin Dashboard  
-```bash
-cd admin
-npm run dev
-```  
-
-## 🌐 Deployment  
-
-### Frontend & Admin (Vercel)  
-- **MediLink (Patients)**: [Live Link](https://power-learn-final-project-8.vercel.app/)  
-- **Admin & Doctor Dashboard**: [Live Link](https://power-learn-final-project-6.vercel.app/)  
-- Connect GitHub repository  
-- Set root directory  
-- Configure build settings  
-- Set environment variables  
-
-### Backend (Render)  
-- Web Service deployment  
-- Set environment variables  
-- Configure build and start commands  
-
-## 🔒 Security Features  
-- JWT Authentication  
-- Password Encryption  
-- CORS Configuration  
-- Environment-based Configuration  
-- Input Validation  
-
-## 📊 Key Technologies  
-
-### Frontend  
-![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=white)  
-![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)  
-![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)  
-
-### Backend  
-![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)  
-![Express.js](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white)  
-![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)  
-
-## 🤝 Contributing  
-
-1. Fork the repository  
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)  
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)  
-4. Push to the branch (`git push origin feature/AmazingFeature`)  
-5. Open a Pull Request  
-
-## 📄 License  
-Distributed under the MIT License. See `LICENSE` for more information.  
-
-## 📞 Contact  
-
-Your Name - gderrick768@gmail.com  
-
-Project Repository: [GitHub](https://github.com/Derrick-Ryan-Giggs/Power-Learn-Final-Project)  
-
-## 🙏 Acknowledgements  
-- React  
-- Tailwind CSS  
-- Node.js  
-- Express  
-- MongoDB  
-- Cloudinary
